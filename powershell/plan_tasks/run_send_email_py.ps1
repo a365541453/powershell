@@ -1,0 +1,1 @@
+﻿Start-Process python ‪F:\github\python\send_email\code\send_mail.py
