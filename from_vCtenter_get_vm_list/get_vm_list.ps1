@@ -3,11 +3,11 @@ Import-Module VMware.ImageBuilder
 Import-Module VMware.VimAutomation.Core
 $ConfirmPreference = 'None'
 
-$vm_ip = '192.167.0.4'
-$vm_username = 'administrator@vsphere.local'
-$vm_password = 'Win2008.cn'
+$vCenter_ip = 'XXXXX'
+$vCenter_username = 'XXXXXX'
+$vCenter_password = 'XXXXXX'
 
-Connect-VIServer -Server $vm_ip -User $vm_username -Password $vm_password
+Connect-VIServer -Server $vCenter_ip -User $vCenter_username -Password $vCenter_password
 
 $vm_list = Get-VMGuest * | Select-Object -ExpandProperty VmName,IPAddress
 
@@ -37,7 +37,7 @@ $cell.item($row,2) = $hostip
 $row = $row + 1
 }
 
-Disconnect-VIServer -Server 192.167.0.4
+Disconnect-VIServer -Server $vCenter_ip
 
 $workbooks.saveas("c:\vm_list.xlsx")
 $workbooks.close()
