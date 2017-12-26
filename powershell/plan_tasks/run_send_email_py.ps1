@@ -1,1 +1,1 @@
-﻿Start-Process python ‪F:\github\python\send_email\code\send_mail.py
+﻿Start-Process python ‪F:\github\powershell\powershell\plan_tasks\run_send_email_py.ps1
